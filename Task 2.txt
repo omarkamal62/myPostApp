@@ -1,0 +1,31 @@
+TASK 2
+
+Line 10: @Component => means that is class will be autodetect by Spring framework for dependency injection
+
+Line 13, 14:
+
+	private UserValidationServiceImpl us
+	private ParamServiceImpl serviceImpl
+	
+	=> common use of service is to be an interface with all methods that going to be
+	 used and class implements these methods from the interface, that class has
+	 @service annotation that specify that it will be used as service layer
+	the class (VerifyHelper) has fields of the implemented classes and it should be
+	theinterfaces.
+
+Lines 50-55:
+	
+	public VerifyHelper(){
+		us = (UserValidationServiceImpl) SpringSupport.getBean("userValidation");
+		serviceImpl = (ParamServiceImpl) SpringSupport.getBean("paramService");
+
+	=> Constructor for VerifyHelper() has two class fields initialized with Class (SpringSupport)
+	that contains a static method getBean in order to use these two services in the class. but i think
+	also that common use and a better use of spring is to use @Autowired annotation to inject the services
+	instead of creating a class help us inject them.
+
+Lines 24-27:
+	
+	use the result of split array specifically in array elements of 0,1. what if str doesn't have ';' in it
+	we will get arrayOutOfBounds Exception for (split[1]). there must be a check for the length of the array
+	if less than 2 to avoid getting error

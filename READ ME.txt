@@ -1,0 +1,44 @@
+TASK 1
+
+1-	Server works on port 8081, Front end works on port 8080 using Vue.js.
+
+2-	In order to start the front end you use npm run dev after installing all dependencies.
+
+3-	Entering the app path “/” (Dashboard) is available for all users whether authenticated or anonymous.
+
+4-	Header have (sign In) link that transfers to login page.
+ 
+5-	There’s a user In-memory: with username: (user) and password: (password).
+
+6-	Also in the login page there’s register button that transfers to register page.
+ 
+7-	Register page has username, password and password confirmation when you register
+	you get (USER) Role, and has to login to get access token.
+
+8-	You have to be authenticated to see links like (Search, Post) in the menu.
+
+9-	And you have to be authenticated to be able to transfer anyway to any of these pages.
+
+10-	Search page has text field you can enter any word and you will get in the same page 
+	all posts that have (search text) and that also are public (Not private).
+
+11-	You can’t enter empty or spaces text you will get alert shows that you entered 
+	invalid data.
+
+12-	If No posts exist with the search text you entered you get an alert showing that.
+
+13-	Post page has form you can enter title, post content and specify whether it’s 
+	public or private.
+
+14-	It has also My Post button that transfers to My Post Page that has all your posts 
+	public or private and you transfer automatically after submitting the post.
+
+Planning Sheet
+
+1-	Post creation save => one hour
+
+2-	User Authentication => one Day (using oauth2)
+
+3-	Post Search => two hours
+
+4-	front-end => one Day (using Vue.js [vuetify template])
